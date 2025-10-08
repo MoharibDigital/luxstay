@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXSTAY - Luxury Destinations</title>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #f2b90d;
+      --background-color: #121212;
+      --text-color: #ffffff;
+      --accent-color: #cbbc90;
+      --card-bg-color: #1a1a1a;
+      --border-color: #493f22;
+    }
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+    .font-serif {
+      font-family: 'Newsreader', serif;
+    }
+    .text-gold {
+      color: var(--primary-color);
+    }
+    .bg-gold {
+      background-color: var(--primary-color);
+    }
+    .border-gold {
+      border-color: var(--primary-color);
+    }
+    .hover-gold:hover {
+        color: var(--primary-color);
+    }
+    .sticky-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: rgba(18, 18, 18, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    .destination-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        transition: transform 0.3s ease;
+    }
+    .destination-card:hover {
+        transform: scale(1.05);
+    }
+    .destination-card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 100%);
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .destination-card:hover .overlay {
+        opacity: 1;
+    }
+    .destination-card .explore-btn {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .destination-card:hover .explore-btn {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-[var(--background-color)]">
+<div class="relative min-h-screen w-full flex flex-col">
+<header class="sticky-header border-b border-solid border-[var(--border-color)] px-4 sm:px-10 py-4">
+<div class="container mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<svg class="text-gold h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6_330)"><path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path></g><defs><clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath></defs></svg>
+<h2 class="font-serif text-gold text-2xl font-bold tracking-wider">LUXSTAY</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-white hover-gold text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-gold text-sm font-bold" href="#">Destinations</a>
+<a class="text-white hover-gold text-sm font-medium transition-colors" href="#">Experiences</a>
+<a class="text-white hover-gold text-sm font-medium transition-colors" href="#">About</a>
+<a class="text-white hover-gold text-sm font-medium transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-gold text-black font-bold text-sm px-6 py-2 rounded-md hover:bg-yellow-400 transition-colors">
+                Start Booking
+            </button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white">
+<div class="absolute inset-0 bg-black opacity-50"></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuDfzJ1plD-R0u8ta1nRWRluFwaSZZWzCL2rcYF7ndSj_N1qxItDEdV5hYTSE5YwrIjDD1iQnShI1YPIHQlKaEvF_3F29-N4ntJwLGmHomHGQPjUVg1uq8GNGQuPlCbj2LjXK_KqXPAdoW5u1546gOL42MXZssFw8N_Sl0KcyKsgiWE_dYJL2xmmo-TwmcCom8R2X7sbbB0MKB-MNxekRpfDq7QTsO3viQJyXht19l_0Hv0abjkJeILHXYQ1HjLPSgIOvbmWBtrrQ");'></div>
+<div class="relative z-10 p-4">
+<h1 class="font-serif text-gold text-5xl md:text-7xl font-bold mb-4">Discover Exclusive Luxury Destinations</h1>
+<p class="text-lg md:text-xl max-w-3xl mx-auto">Explore our curated collection of luxury stays in the world's most sought-after locations, where unparalleled comfort meets breathtaking beauty.</p>
+</div>
+</section>
+<section class="py-20 bg-[var(--background-color)]">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcVAD_3D45P_Thx_C9DxiQF3cLFD2HaDyIAk0nALxUMmeI4CTAECEmuDLzB_KLCS7R5uUJmPJ96iNmpgnaWtTKCZ12btCeotDBW35PhCNXyTvXX_s8ZbPliSX4jFbdy5YGYiQmvsrLSlVBJLgTjnvBMhlnK9TK1Z7O6lJfcWaMhPxAyYZBEopml7BwGRZRNCkzUBWAX0PyNv9hyC6dJ0I2Tc7ckRMDkdnAzr56n8kY7vvlY5iveXwVOgDaa52APuSaeuzfMM4_hE0"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">Marrakech</h3>
+<p class="text-sm">125 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoSW0faTqFJ79R8IO81ZZYdKGlpOIQZT1G1uE0htl9er7apJKrypOEGoPArSMG0uenWInGQ2wDZI33Vu5pphYr3zxcRS2jVuWzIG3EPRTUrBaLnIjZdXV0pL3x7l6VUUeoRaSAL_wgAwufU-Nu8_03_SyrqrgB8kKMHWZhPcO52WGM8GZIhxDEF8lmUI1UmXVB5N0T5SeDJrcaUDGQYN5YDMH3Uk8ops2fzozqC0SbD0RRtSuozPwoB3WVDqtgJ_PL5FbMr9A3ZF0"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">Casablanca</h3>
+<p class="text-sm">82 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyMMWO2Bb-861vsHMbCtAJZmEwVzQ8uEXLWhneHuGtjvLvBPq8Jw9cATT6BIvd9OddP871_wL56V6sibyPPUYIPVOJak3d411pyzyNLIinbkgoCVOGPa0I-Plze39VwOsFGNimgqB8_UncLaYajs_DzSq7D5hF8YLO_OfpySRxoNVW3FxZ5ILpybONyW07hRl5vGU0eD2A6AQz35qT62tCw8253rRYUO-oSHn_npJKF5NKhSaFlGssqwHx4lCvlBIPNlru3-m5hrs"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">Tangier</h3>
+<p class="text-sm">64 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1JTMwGWe5404HNyG2R5_Vl3p2BDaIZDIRqCXGHxW-UA52-wyftc48OTj6daNI1N_B1QapYFfTpPQs2oZ6uLVy6dtqqz_Le7mEvbTiHA6gEyvYqWn63WSV6iyWu-TSLyZsRKzvOR0gY_6CgpDNCRgy-v-tC36FkWZtrIxkqKvE8KDUBMzH0vFu6QyvydDXOJxoId7-atQzRXtMDCsx_ShGoAsgmpa_jPMr4YwsSzdFXiXkw-cUiUqOQVQpTNQLj7TsMVELN6MSz9U"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">Paris</h3>
+<p class="text-sm">210 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD18iGv7fZLnbKlCrWcE4czy-10ljQmAR_ADa7MkVqDjbYtQTTdlZsHvL1PXnyguP1FQ5OZuu2w_dLx-IpftxIFRB0soKWbTN1n_J18QONyrWxZZCAsVUfs7r-LZp1nCdwkTSjqGnnPK3o1pg79n2ATWtSA0u1KGTcFXzZ7WrxXTrxyxKcMlo8mOSCI4oM1sg4gPuYl-SYSpvEOW_F3LMOm0Wiz2GyTpRrb2N_WsgCETDsKMXSQQ7OHwm28sDsXKQ7Fj_p_OMw5tNU"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">Dubai</h3>
+<p class="text-sm">180 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+<div class="destination-card group" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAv4cXL8yULXp4lOWvzUsgeC0-oCYantx0DWNLlzgA0-mBIUAAcjZcxutsEN-z3fthRPYPtGy2impfE6BXKZQ5QVr-8PWroZnLdbBt0Yb8WNHrwLvsmsl7LgJ9DYTJZVB01D-uvZR6iwujRi3067l4b-pv46mx5tNa28uG69V081rbSdj3uo-Po8_e-eB1xdkmvu5jcNJMGqMZp3bMPMD3z7-W_i8yBR6qniDz-wz-xdx-q61c1yXl8qf82Kz3vSqFmFk65yZBdJKI"); background-size: cover; background-position: center;'>
+<div class="overlay"></div>
+<div class="relative z-10 flex flex-col justify-end h-80 p-6 text-white">
+<h3 class="font-serif text-gold text-3xl font-bold">London</h3>
+<p class="text-sm">195 Properties</p>
+<button class="explore-btn mt-4 bg-gold text-black font-bold text-sm px-6 py-2 rounded-md self-start">Explore</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[var(--card-bg-color)]">
+<div class="container mx-auto px-4 text-center">
+<h2 class="font-serif text-4xl font-bold mb-4">Not just stays, but complete experiences.</h2>
+<p class="text-lg text-[var(--accent-color)] mb-12 max-w-2xl mx-auto">We offer more than just a place to sleep. Immerse yourself in the local culture with our curated experiences.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center">
+<div class="p-5 bg-black rounded-full mb-4 border border-gold"><span class="material-symbols-outlined text-gold text-4xl">local_see</span></div>
+<h3 class="font-serif text-2xl font-bold text-gold mb-2">Private Tours</h3>
+<p class="text-[var(--accent-color)]">Discover hidden gems with our expert local guides.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="p-5 bg-black rounded-full mb-4 border border-gold"><span class="material-symbols-outlined text-gold text-4xl">spa</span></div>
+<h3 class="font-serif text-2xl font-bold text-gold mb-2">Luxury Spa</h3>
+<p class="text-[var(--accent-color)]">Rejuvenate your body and soul with our exclusive spa treatments.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="p-5 bg-black rounded-full mb-4 border border-gold"><span class="material-symbols-outlined text-gold text-4xl">restaurant</span></div>
+<h3 class="font-serif text-2xl font-bold text-gold mb-2">Fine Dining</h3>
+<p class="text-[var(--accent-color)]">Savor exquisite culinary creations from world-renowned chefs.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[var(--background-color)]">
+<div class="container mx-auto px-4">
+<h2 class="font-serif text-center text-4xl font-bold mb-12">Exclusive Offers</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-[var(--card-bg-color)] rounded-lg overflow-hidden shadow-lg group">
+<div class="relative">
+<img alt="The Grand Oasis" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI7j5mrQsOk2TsuwmDpGXDlS900oUO_mibVzdlPtjLTMV3d8_kVO4xKZkFTFBMy4EJlnMZp44MGeAcHgr4cxOWJMxsvu5_6Fre9P6drlOjTzWzj14_B9j6Ny78NoBDnb8OiM7_kzZ1M7vWlJ9YKpZJvHcXAHWUDTmGWJTnPUQbwPssNdOPBFaUsCzA9DghhCbBndIoZ_7mWZ2zFzuL4EYgCsz1YZpafuCXrC0fYF7etFNHX7gTFOw5YOOV-U3MULmRO3RxShQX8vQ"/>
+<div class="absolute top-4 right-4 bg-gold text-black text-sm font-bold px-3 py-1 rounded-full">-20%</div>
+</div>
+<div class="p-6">
+<h3 class="font-serif text-2xl font-bold mb-2">The Grand Oasis</h3>
+<p class="text-[var(--accent-color)] mb-4">A serene escape in the heart of the desert.</p>
+<button class="bg-transparent border border-gold text-gold font-bold text-sm w-full py-2 rounded-md hover:bg-gold hover:text-black transition-colors">Book Now</button>
+</div>
+</div>
+<div class="bg-[var(--card-bg-color)] rounded-lg overflow-hidden shadow-lg group">
+<div class="relative">
+<img alt="The Royal Retreat" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACtvrQZlUIFFOw3XfkkcHO6-1OvNykRaJEKyoqSqowaTlsywoYgPKFnBLZRaoRv_zfD7pDX0Pncpo3fJ2HbyUvofdDj4PFke9k2lAWfNYm03_bIqBTnECeWY6KNMOLTwetNVwgXWBTlhhuYRGwelku66PqYIFbkyBbWhB-WGeNfmcUIQPC9mHOK62e44UMairnnJJ9I7-kve2dc4pXWDRAWLk3hLxYllqGsdbv4MkLUlKlbQXsT-S5c4a2M5kbGt8xkbiezs0jFEk"/>
+<div class="absolute top-4 right-4 bg-gold text-black text-sm font-bold px-3 py-1 rounded-full">-15%</div>
+</div>
+<div class="p-6">
+<h3 class="font-serif text-2xl font-bold mb-2">The Royal Retreat</h3>
+<p class="text-[var(--accent-color)] mb-4">Live like royalty in this majestic palace.</p>
+<button class="bg-transparent border border-gold text-gold font-bold text-sm w-full py-2 rounded-md hover:bg-gold hover:text-black transition-colors">Book Now</button>
+</div>
+</div>
+<div class="bg-[var(--card-bg-color)] rounded-lg overflow-hidden shadow-lg group">
+<div class="relative">
+<img alt="The Coastal Palace" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAnLYAcbJrxv1GfuIn5mQul-R-e4La4L04tAV1CrB3PiN8Mw1nNLSFCdA8TTuSWLImqusRL-J7B82JOtPEbHfMRRfRuo6ThM0UU2KSJyvyKWK0li32QErryjT9tD6ve2XyGWIuy2zrDzZcD0EDIE76dmol7PGimusa05IXBwCv2WldBDykbUnRQJONu2FcPcQOrLUZjUJPp_ChjBIHwCFTjnRrz2eUonM2mx25TipFSsg4GiQmMhKKGH8p8JJj-Iw5heF3V7P7CI4"/>
+<div class="absolute top-4 right-4 bg-gold text-black text-sm font-bold px-3 py-1 rounded-full">-25%</div>
+</div>
+<div class="p-6">
+<h3 class="font-serif text-2xl font-bold mb-2">The Coastal Palace</h3>
+<p class="text-[var(--accent-color)] mb-4">Wake up to stunning ocean views every day.</p>
+<button class="bg-transparent border border-gold text-gold font-bold text-sm w-full py-2 rounded-md hover:bg-gold hover:text-black transition-colors">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')">
+<div class="container mx-auto px-4 text-center text-white">
+<h2 class="font-serif text-4xl font-bold mb-4">Add your luxury property to LUXSTAY.</h2>
+<p class="text-lg mb-8 max-w-2xl mx-auto">Join our exclusive collection of high-end properties and reach a discerning clientele.</p>
+<button class="bg-gold text-black font-bold text-lg px-8 py-3 rounded-md hover:bg-yellow-400 transition-colors">Start Hosting</button>
+</div>
+</section>
+</main>
+<footer class="bg-black py-12">
+<div class="container mx-auto px-4 text-center text-[var(--accent-color)]">
+<div class="flex justify-center items-center gap-2 mb-6">
+<svg class="text-gold h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_6_330)"><path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path></g><defs><clipPath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clipPath></defs></svg>
+<h2 class="font-serif text-gold text-2xl font-bold tracking-wider">LUXSTAY</h2>
+</div>
+<div class="flex justify-center gap-6 mb-6">
+<a class="hover-gold transition-colors" href="#">Privacy</a>
+<a class="hover-gold transition-colors" href="#">Terms</a>
+<a class="hover-gold transition-colors" href="#">Help</a>
+</div>
+<div class="flex justify-center gap-6 mb-6">
+<a class="text-white hover-gold transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12Z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover-gold transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zm-1.115 1.802c-1.058-.048-1.71-.21-2.227-.412a3.097 3.097 0 00-1.12 1.12c-.202.517-.364 1.17-.412 2.227-.048 1.01-.06 1.344-.06 3.75s.012 2.74.06 3.75c.048 1.058.21 1.71.412 2.227a3.097 3.097 0 001.12 1.12c.517.202 1.17.364 2.227.412 1.01.048 1.344.06 3.75.06s2.74-.012 3.75-.06c1.058-.048 1.71-.21 2.227-.412a3.097 3.097 0 001.12-1.12c.202-.517.364-1.17.412-2.227.048-1.01.06-1.344.06-3.75s-.012-2.74-.06-3.75c-.048-1.058-.21-1.71-.412-2.227a3.097 3.097 0 00-1.12-1.12c-.517-.202-1.17-.364-2.227-.412-1.01-.048-1.344-.06-3.75-.06s-2.74.012-3.75.06zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 1.802a3.333 3.333 0 110 6.666 3.333 3.333 0 010-6.666zm5.338-3.205a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-white hover-gold transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+</div>
+<p class="text-sm">© 2024 LUXSTAY. All rights reserved.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
